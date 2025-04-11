@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Calculadora simple con operaciones básicas" /> 
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Contenedor principal de la aplicación -->
+  <main>
+    <h1>Calculadora</h1>
+    <!-- Sección principal de la calculadora -->
+    <section class="calculator">
+      <!-- Pantalla de visualización -->
+      <div class="screen">
+        <input type="text" id="display" readonly aria-label="Pantalla de la calculadora" />
+      </div>
+      
+      <!-- Sección de botones -->
+      <div class="buttons">
+        <!-- Primera fila: 7, 8, 9, / -->
+        <div class="row">
+          <button data-num="7" id="btn-7">7</button>
+          <button data-num="8" id="btn-8">8</button>
+          <button data-num="9" id="btn-9">9</button>
+          <button data-op="/" id="btn-division" class="operator">÷</button> 
+        </div>
+        
+        <!-- Segunda fila: 4, 5, 6, * -->
+        <div class="row">
+          <button data-num="4" id="btn-4">4</button>
+          <button data-num="5" id="btn-5">5</button>
+          <button data-num="6" id="btn-6">6</button>
+          <button data-op="*" id="btn-multiplication" class="operator">×</button> 
+        </div>
+        
+        <!-- Tercera fila: 1, 2, 3, - -->
+        <div class="row">
+          <button data-num="1" id="btn-1">1</button>
+          <button data-num="2" id="btn-2">2</button>
+          <button data-num="3" id="btn-3">3</button>
+          <button data-op="-" id="btn-subtraction" class="operator">−</button>
+        </div>
+        
+        <!-- Cuarta fila: 0, ., =, + -->
+        <div class="row">
+          <button data-num="0" id="btn-0">0</button>
+          <button data-num="." id="btn-dot">.</button>
+          <button id="btn-equal" class="equal">=</button>
+          <button data-op="+" id="btn-sum" class="operator">+</button>
+        </div>
+        
+        <!-- Quinta fila: Botón de limpiar -->
+        <div class="row">
+          <button id="btn-clear" class="clear">CE</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pie de página con información adicional -->
+    <footer>
+      <p><a href="https://github.com/rafaelestevezdev">&copy rafaelestevezdev</a></p>
+    </footer>
+  </main>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

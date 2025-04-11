@@ -1,0 +1,196 @@
+/**
+ * Estilos para Calculadora Simple
+ * Organizado siguiendo la metodología BEM y con variables CSS
+ * para facilitar personalizaciones futuras.
+ */
+
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Comfortaa:wght@300..700&display=swap');
+
+/* Variables CSS para personalización */
+:root {
+    /* Colores de fondo */
+    --color-background: #f0e6f6;
+    --color-container: #fef6ff;
+  
+    /* Colores de botones */
+    --color-button: #f4edfc;
+    --color-button-hover: #e8d9f8;
+    --color-button-operator: #c5deff;
+    --color-button-equal: #b8e0d2;
+    --color-button-clear: #ffc2c7;
+  
+    /* Colores de texto */
+    --color-text-primary: #5d576b;
+    --color-text-secondary: #7c7596;
+  
+    /* Otros estilos */
+    --color-border: #e6ddf3;
+    --color-shadow: rgba(157, 134, 192, 0.1);
+    --border-radius: 12px;
+
+    /* Transiciones */
+    --transition-speed: 0.2s;
+}
+
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(157, 134, 192, 0.2);
+    letter-spacing: 1px;
+}
+
+/* Contenedor de la calculadora */
+.calculator {
+    background-color: var(--color-container);
+    min-height: 500px;
+    width: 350px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 10px 25px var(--color-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pantalla de visualización */
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px var(--color-shadow);
+}
+
+/* Campo de entrada para el display */
+.screen input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 2.2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    text-align: right;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #ffffff;
+    color: var(--color-text-primary);
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+}
+
+/* Contenedor de botones */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+/* Filas de botones */
+.row {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+}
+
+/* Estilo base para los botones */
+.row button {
+    flex: 1;
+    padding: 1.2rem 0.8rem;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: var(--color-button);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 3px 5px var(--color-shadow);
+}
+
+/* Estado hover de los botones */
+.row button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+/* Estado activo de los botones */
+.row button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px var(--color-shadow);
+}
+
+/* Botones de operadores */
+.row button.operator {
+    background-color: var(--color-button-operator);
+    font-weight: 700;
+}
+
+/* Botón de igual */
+.row button.equal {
+    background-color: var(--color-button-equal);
+    font-weight: 700;
+}
+
+/* Botón de limpiar */
+.row button.clear {
+    background-color: var(--color-button-clear);
+    font-weight: 700;
+    width: 100%;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+a{
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
